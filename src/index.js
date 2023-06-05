@@ -1,7 +1,11 @@
 import './style.css'; 
-import { components } from './menu';
+import { menuTab } from './menu';
+import { homeTab } from './home';
+import { aboutTab } from './about';
 
-import './menu';
+window.onload = function(){
+    contentBody.appendChild(homeTab());
+}
 
 const contentBox = document.getElementById('content');
 
@@ -61,5 +65,23 @@ navMenuContainer.appendChild(aboutContainer);
 home.addEventListener('click', () => {
 })
 
+menuContainer.addEventListener('click', () => {
+    if (contentBody.firstChild != ''){
+        contentBody.innerHTML = '';
+    }
+    contentBody.appendChild(menuTab());
+})
 
-export {contentBody}
+homeContainer.addEventListener('click', () => {
+    if (contentBody.firstChild != ''){
+        contentBody.innerHTML = '';
+    }
+    contentBody.appendChild(homeTab())
+})
+
+aboutContainer.addEventListener('click', () => {
+    if (contentBody.firstChild != ''){
+        contentBody.innerHTML = '';
+    }
+    contentBody.appendChild(aboutTab())
+})
