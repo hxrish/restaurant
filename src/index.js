@@ -17,6 +17,7 @@ logoContainer.id = 'logoContainer';
 const mainLogoContainer = document.createElement('div');
 mainLogoContainer.id = 'mainLogoContainer';
 
+
 const navMenuContainer = document.createElement('div');
 navMenuContainer.id = 'navMenuContainer';
 const home = document.createElement('div');
